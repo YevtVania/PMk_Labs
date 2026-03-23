@@ -1,0 +1,23 @@
+--------------- Build Started: 03/16/2026 11:47:13 Project: LW02, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
+main.c: In function 'main':
+main.c:16:13: warning: implicit declaration of function 'LED_2_Write' [-Wimplicit-function-declaration]
+             LED_2_Write(0);  
+             ^
+main.c:17:13: warning: implicit declaration of function 'LED_3_Write' [-Wimplicit-function-declaration]
+             LED_3_Write(1);  
+             ^
+arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_541\Debug\LW02.a .\CortexM0\ARM_GCC_541\Debug\Button.o .\CortexM0\ARM_GCC_541\Debug\Button_PM.o .\CortexM0\ARM_GCC_541\Debug\LED.o .\CortexM0\ARM_GCC_541\Debug\LED_PM.o .\CortexM0\ARM_GCC_541\Debug\CyFlash.o .\CortexM0\ARM_GCC_541\Debug\CyLib.o .\CortexM0\ARM_GCC_541\Debug\cyPm.o .\CortexM0\ARM_GCC_541\Debug\cyutils.o .\CortexM0\ARM_GCC_541\Debug\CyLFClk.o .\CortexM0\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM0\ARM_GCC_541\Debug\LED2.o .\CortexM0\ARM_GCC_541\Debug\LED2_PM.o .\CortexM0\ARM_GCC_541\Debug\LED3.o .\CortexM0\ARM_GCC_541\Debug\LED3_PM.o .\CortexM0\ARM_GCC_541\Debug\SW_Tx_UART.o .\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o .\CortexM0\ARM_GCC_541\Debug\SW_Tx_UART_AsmGnu.o
+arm-none-eabi-ar.exe: creating .\CortexM0\ARM_GCC_541\Debug\LW02.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o "C:\PSoC Creatot\lb1\CSN_UzhNU\LW02.cydsn\CortexM0\ARM_GCC_541\Debug\LW02.elf" .\CortexM0\ARM_GCC_541\Debug\main.o .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_541\Debug\cymetadata.o .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o .\CortexM0\ARM_GCC_541\Debug\LW02.a -mcpu=cortex-m0 -mthumb -L Generated_Source\PSoC4 -Wl,-Map,.\CortexM0\ARM_GCC_541\Debug/LW02.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+.\CortexM0\ARM_GCC_541\Debug\main.o: In function `main':
+C:\PSoC Creatot\lb1\CSN_UzhNU\LW02.cydsn/main.c:16: undefined reference to `LED_2_Write'
+C:\PSoC Creatot\lb1\CSN_UzhNU\LW02.cydsn/main.c:17: undefined reference to `LED_3_Write'
+C:\PSoC Creatot\lb1\CSN_UzhNU\LW02.cydsn/main.c:23: undefined reference to `LED_2_Write'
+C:\PSoC Creatot\lb1\CSN_UzhNU\LW02.cydsn/main.c:24: undefined reference to `LED_3_Write'
+C:\PSoC Creatot\lb1\CSN_UzhNU\LW02.cydsn/main.c:31: undefined reference to `LED_2_Write'
+C:\PSoC Creatot\lb1\CSN_UzhNU\LW02.cydsn/main.c:32: undefined reference to `LED_3_Write'
+collect2.exe: error: ld returned 1 exit status
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Build Failed: 03/16/2026 11:47:14 ---------------
