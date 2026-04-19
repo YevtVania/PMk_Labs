@@ -68,7 +68,7 @@
 
 ### Клонування
 ```bash
-git clone https://github.com/ERRORES241/PMk_Lab2_UzhNU.git
+git clone [https://github.com/YevtVania/PMk_Labs/tree/main/LAB2]
 ```
 
 ### Відкриття
